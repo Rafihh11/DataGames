@@ -1,0 +1,25 @@
+# DataGames
+import os
+import random
+import string
+data = dict()
+while True:
+    os.system("cls") # WIN
+    print(f" {' DATA GAMES ':—^35}")
+
+    keyFinal = "".join(random.choice(string.ascii_uppercase) for i in range(3))
+    print(f"KeyFinal = {keyFinal}")
+    nama_games = input("Enter Nama Games\t\t:")
+    pembuat = input("Enter Pembuat\t\t:")
+    tahun_buat = input("Enter Tahun Buat\t:")
+    data[ keyFinal ] = { keyFinal : { 'Nama gameskey' : nama_games, 'pembuatkey' : pembuat, 'tahun buat' : tahun_buat, } }
+    opsi = input("input data GAMES LAGI (y/t) :").lower()
+    if opsi == 't':
+        break
+
+print("-"*40)
+print(f"{'key':<5} {'Nama Games':<20} {'Pembuat':<20} {'Tahun Buat':<20}")
+print("-"*40)
+
+for key, value in data.items(): 
+    print(f" {key:<5} {value['Namakey']:<20} {value['pembuatkey']:<15} {value['tahunkey']:<15} ")
